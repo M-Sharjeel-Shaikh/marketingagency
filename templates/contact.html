@@ -1,0 +1,53 @@
+{% include 'header.html' %}
+
+   <!-- body -->
+   <body class="main-layout">
+      <!-- contact  section -->
+      <div id="contact" class="contact ">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="titlepage">
+                     <h2><strong class="yellow">Contact us</strong><br>Request a call back</h2>
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               {% if messages %}
+                  {% for msg in messages %}
+                     <div class="alert alert-{{ msg.tags }} mb-0 alert-dismissible fade show text-center"  role="alert">
+                        <strong>Message: </strong> {{ msg }}
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                     </div>
+                  {% endfor %}
+               {% endif %}
+               <div class="col-md-8 offset-md-2">
+                  <form id="post_form" class="contact_form" action="{% url 'send' %}" method="post">
+                     {% csrf_token %}
+                     <div class="row">
+                        <div class="col-md-12 ">
+                           <input class="contact_control" placeholder=" Name" type="type" name="name" required> 
+                        </div>
+                        <div class="col-md-12">
+                           <input class="contact_control" placeholder="Enter Valid Email Here" type="email" name="email" required> 
+                        </div>
+                        <div class="col-md-12">
+                           <input class="contact_control" placeholder="Phone Number " type="type" name="contact_no" required>                          
+                        </div>
+                        <div class="col-md-12">
+                           <textarea class="textarea" placeholder="Type Your Message Here" type="text" name="message" required></textarea>
+                        </div>
+                        <div class="col-md-12">
+                           <button class="send_btn" href="/send" type="submit">Send</button>
+                        </div>
+                  </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- end contact  section -->
+      {% include 'footer.html' %}
+   </body>
