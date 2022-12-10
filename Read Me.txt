@@ -2,22 +2,26 @@ This is marketing Agency Website (Dynamic)
 
 ==================== Functionality=============
 ----> Contact Form
-----> Subscriber
 ----> About page
 ----> Contact page
 ----> Index Page
 ----> Clinet Page
 ----> Service Page
 ----> Team Page
+----> Subscription Client Info and database table (Lead Generation)
 
 
 Created by : M Sharjeel Shaikh
 ==================== Instruction To Run Website =============
----> 1.Download Python
----> 2.Pip install Django
----> 3.Open folder in Command line
----> 4.Pass Command "python manage.py runserver"
+---> 1.Download Python.
+---> 2.Pip install Django in cmd.
+---> 3.Open folder in Cmd where you kept it folder.
+---> 4.Pass Command "python manage.py runserver".
+---> 5.Open Browser and type localhost(port: 8000)
+---> 6.To Open admin panel type( "localhost:8000\admin"   )
+---> 7.Django admin panel appear and then enter username and password 
+       copy from below.
 
-==================== Admin Info =============
+==================== Admin Info (username , password) =============
 Username : admin
 Password : sharjeel
