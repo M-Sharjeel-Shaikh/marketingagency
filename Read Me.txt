@@ -18,4 +18,6 @@ Created by : M Sharjeel Shaikh
 ---> 3.Open folder in Command line
 ---> 4.Pass Command "python manage.py runserver"
 
-
+==================== Admin Info =============
+Username : admin
+Password : sharjeel
